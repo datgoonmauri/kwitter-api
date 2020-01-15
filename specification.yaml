@@ -1,11 +1,11 @@
 openapi: 3.0.1
 info:
-  title: Kwitter
+  title: Gamer-Tagged-Api
   version: "1.0.0"
 servers:
   - url: http://localhost:3000
     description: localhost
-  - url: https://kwitter-api.herokuapp.com
+  - url: https://gamertagged-api.herokuapp.com
     description: Production Server
 components:
   schemas:
