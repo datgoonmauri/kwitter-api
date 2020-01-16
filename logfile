@@ -1,0 +1,47 @@
+postgres: could not access directory "/usr/local/pgsql/data": No such file or directory
+Run initdb or pg_basebackup to initialize a PostgreSQL data directory.
+2020-01-16 03:47:27.085 PST [48646] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin19.2.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-01-16 03:47:27.151 PST [48646] LOG:  listening on IPv6 address "::1", port 5432
+2020-01-16 03:47:27.151 PST [48646] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-01-16 03:47:27.152 PST [48646] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-01-16 03:47:27.167 PST [48648] LOG:  database system was shut down at 2020-01-16 03:46:44 PST
+2020-01-16 03:47:27.174 PST [48646] LOG:  database system is ready to accept connections
+2020-01-16 04:05:19.285 PST [49839] ERROR:  relation "messages" does not exist at character 56
+2020-01-16 04:05:19.285 PST [49839] STATEMENT:  SELECT count(DISTINCT("message"."id")) AS "count" FROM "messages" AS "message" LEFT OUTER JOIN "likes" AS "likes" ON "message"."id" = "likes"."messageId";
+2020-01-16 04:05:19.285 PST [49840] ERROR:  relation "messages" does not exist at character 268
+2020-01-16 04:05:19.285 PST [49840] STATEMENT:  SELECT "message".*, "likes"."id" AS "likes.id", "likes"."username" AS "likes.username", "likes"."messageId" AS "likes.messageId", "likes"."createdAt" AS "likes.createdAt" FROM (SELECT "message"."id", "message"."text", "message"."username", "message"."createdAt" FROM "messages" AS "message" ORDER BY "message"."createdAt" DESC LIMIT 100 OFFSET 0) AS "message" LEFT OUTER JOIN "likes" AS "likes" ON "message"."id" = "likes"."messageId" ORDER BY "message"."createdAt" DESC;
+2020-01-16 04:40:19.722 PST [52014] FATAL:  database "gamertagged-api" does not exist
+2020-01-16 04:45:23.339 PST [48649] PANIC:  could not open file "/Users/MAU/kwitter-api/./src/global/pg_control": No such file or directory
+2020-01-16 04:45:23.391 PST [48646] LOG:  checkpointer process (PID 48649) was terminated by signal 6: Abort trap: 6
+2020-01-16 04:45:23.391 PST [48646] LOG:  terminating any other active server processes
+2020-01-16 04:45:23.391 PST [52314] WARNING:  terminating connection because of crash of another server process
+2020-01-16 04:45:23.391 PST [52314] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2020-01-16 04:45:23.391 PST [52314] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2020-01-16 04:45:23.392 PST [48652] WARNING:  terminating connection because of crash of another server process
+2020-01-16 04:45:23.392 PST [48652] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2020-01-16 04:45:23.392 PST [48652] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2020-01-16 04:45:23.451 PST [48646] LOG:  all server processes terminated; reinitializing
+2020-01-16 04:45:23.579 PST [48646] FATAL:  could not stat data directory "/Users/MAU/kwitter-api/./src": No such file or directory
+2020-01-16 04:45:23.613 PST [48646] LOG:  database system is shut down
+2020-01-16 04:47:00.655 PST [52436] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin19.2.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-01-16 04:47:00.776 PST [52436] LOG:  listening on IPv6 address "::1", port 5432
+2020-01-16 04:47:00.776 PST [52436] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-01-16 04:47:00.836 PST [52436] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-01-16 04:47:00.852 PST [52437] LOG:  database system was shut down at 2020-01-16 04:46:46 PST
+2020-01-16 04:47:00.905 PST [52436] LOG:  database system is ready to accept connections
+2020-01-16 05:19:04.951 PST [54490] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:19:04.951 PST [54490] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'userman';
+2020-01-16 05:20:27.450 PST [54571] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:20:27.450 PST [54571] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'userman';
+2020-01-16 05:20:27.694 PST [54571] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:20:27.694 PST [54571] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'userman';
+2020-01-16 05:20:27.860 PST [54571] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:20:27.860 PST [54571] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'userman';
+2020-01-16 05:20:28.109 PST [54571] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:20:28.109 PST [54571] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'userman';
+2020-01-16 05:22:02.204 PST [54665] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:22:02.204 PST [54665] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'string';
+2020-01-16 05:55:37.109 PST [56710] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:55:37.109 PST [56710] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'mauricio';
+2020-01-16 05:57:35.741 PST [56904] ERROR:  relation "users" does not exist at character 131
+2020-01-16 05:57:35.741 PST [56904] STATEMENT:  SELECT "username", "displayName", "password", "about", "picture", "pictureContentType", "googleId", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'mauricio';

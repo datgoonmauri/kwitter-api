@@ -1,0 +1,20 @@
+Thu, 16 Jan 2020 12:05:19 GMT GET /messages 500 
+	request:
+		headers: {"host":"localhost:3000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36","sec-fetch-user":"?1","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","accept-encoding":"gzip, deflate, br","accept-language":"en-US,en;q=0.9"}
+		user: -
+		body: {}
+	response:
+		status: 500
+		error message: relation "messages" does not exist
+		error stack: SequelizeDatabaseError: relation "messages" does not exist
+    at Query.formatError (/Users/MAU/kwitter-api/node_modules/sequelize/lib/dialects/postgres/query.js:363:16)
+    at /Users/MAU/kwitter-api/node_modules/sequelize/lib/dialects/postgres/query.js:86:18
+    at tryCatcher (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/promise.js:689:18)
+    at Async._drainQueue (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/MAU/kwitter-api/node_modules/bluebird/js/release/async.js:17:14)
+    at processImmediate (internal/timers.js:439:21)
